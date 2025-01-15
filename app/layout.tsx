@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: "Forum",
   description: "Supercharge Your Code: Collaborative Q&A for Developers.",
   icons: {
-    icon: "/assets/images/site-logo.svg",
+    icon: "/assets/images/logos.png",
   },
 };
 
