@@ -68,15 +68,10 @@ const Mobile = () => {
         className="background-light900_dark200 border-none"
       >
         <Link href="/" className="flex items-center gap-1">
-          <Image
-            src="/assets/images/site-logo.svg"
-            width={23}
-            height={23}
-            alt="Forum"
-          />
+         
 
           <p className="h2-bold text-dark100_light900 font-spaceGrotesk">
-            Forum
+            Bec Forum
           </p>
         </Link>
         <div>
