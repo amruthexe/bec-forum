@@ -2,7 +2,7 @@
 
 ## 🌐 Live 
 
-Explore the live demonstration of the project: [nextjs14-forum](https://4rm.vercel.app/)
+Explore the live demonstration of the project: [nextjs14-forum](https://becforum.vercel.app//)
 
 ## 📝 Description
 
@@ -312,6 +312,3 @@ OPENAI_API_KEY=<YOUR_OPENAI_API_KEY>
 RAPID_API_KEY=<YOUR_RAPID_API_KEY>
 ```
 
-## 📚 References
-
-JSMastery. (2023). [Ultimate Next.js 14 Course | Become a top 1% Next.js 14 developer](https://www.jsmastery.pro/ultimate-next-course). E-Learning.
