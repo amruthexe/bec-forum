@@ -64,7 +64,7 @@ forum/
 ├   ├       ├── page.tsx
 ├   ├       └── loading.tsx
 ├   └── api/
-├       ├── openai/
+├       ├── gemini/
 ├       ├   └── route.ts
 ├       ├── rapidapi/
 ├       ├   └── route.ts
@@ -307,7 +307,7 @@ MONGODB_URL=<YOUR_MONGODB_URL>
 
 NEXT_PUBLIC_SERVER_URL=<YOUR_SERVER_URL>
 
-OPENAI_API_KEY=<YOUR_OPENAI_API_KEY>
+
 
 RAPID_API_KEY=<YOUR_RAPID_API_KEY>
 ```
