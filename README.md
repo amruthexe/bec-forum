@@ -214,7 +214,7 @@ forum/
 
 </details><br/>
 
-[![Technologies Used](https://skillicons.dev/icons?i=ts,nextjs,tailwind,mongodb,vercel)](https://skillicons.dev)
+[![Technologies Used](https://skillicons.dev/icons?i=ts,nextjs,tailwind,mongodb,vercel,gemini)](https://skillicons.dev)
 
 ## 🧰 Get Started
 
