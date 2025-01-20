@@ -17,7 +17,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Home - Forum",
+  title: "Home - Bec Forum",
 };
 
 export default async function Home({ searchParams }: SearchParamsProps) {

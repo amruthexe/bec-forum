@@ -96,27 +96,38 @@ const Answer = ({
       });
     }
   }
-
+  const formatAiResponse = (response: string): string => {
+    return response
+      .replace(/```(\w+)?/g, "<pre><code class='language-$1'>") // Format code blocks
+      .replace(/```/g, "</code></pre>") // Close code blocks
+      .replace(/\n/g, "<br />") // Convert line breaks to HTML breaks
+      .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") // Bold text
+      .replace(/\*(.*?)\*/g, "<em>$1</em>"); // Italicize text
+  };
+  
   const generateAiAnswer = async () => {
     if (!authorId) return;
-
+  
     setIsSubmittingAi(true);
-
+  
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/openai`,
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/gemini`, // Updated endpoint for Gemini API
         {
           method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
           body: JSON.stringify({ question }),
         }
       );
-
+  
       const aiAnswer = await response.json();
-
+  
       const formattedAiAnswer = aiAnswer.error
         ? "Sorry, your free tokens have been exhausted. Buy a subscription to get AI-generated answers"
-        : aiAnswer.reply.replace(/\n/g, "<br />");
-
+        : formatAiResponse(aiAnswer.reply);
+  
       if (editorRef.current) {
         const editor = editorRef.current as any;
         editor.setContent(formattedAiAnswer);
@@ -126,19 +137,20 @@ const Answer = ({
         title: "Error generating AI answer ⚠️",
         variant: "destructive",
       });
-
-      console.log(error);
+  
+      console.error("Error generating AI answer:", error);
       throw error;
     } finally {
       setIsSubmittingAi(false);
-
+  
       toast({
         title: "AI answer generated successfully 🎉",
         variant: "default",
       });
     }
   };
-
+  
+  
   return (
     <div>
       <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-center sm:gap-2">

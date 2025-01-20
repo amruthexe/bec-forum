@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 const config = {
   apiKey: process.env.NEXT_PUBLIC_RAPID_API_KEY as string,
-  apiHost: "https://jsearch.p.rapidapi.com",
+  apiHost: "jsearch.p.rapidapi.com", // Use only the host name here
 };
 
 export const POST = async (request: Request) => {
@@ -14,19 +14,22 @@ export const POST = async (request: Request) => {
   } = await request.json();
 
   try {
-    const response = await fetch(
-      `${config.apiHost}/search?query=${searchQuery}&location=${filter}&page=${page}&num_pages=${pageSize}`,
-      {
-        method: "GET",
-        headers: {
-          "X-RapidAPI-Key": config.apiKey,
-          "X-RapidAPI-Host": config.apiHost,
-        },
-      }
-    );
+    // Construct the full API URL
+    const apiUrl = `https://${config.apiHost}/search?query=${encodeURIComponent(
+      searchQuery
+    )}&location=${encodeURIComponent(filter)}&page=${page}&num_pages=${pageSize}`;
 
+    const response = await fetch(apiUrl, {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Key": config.apiKey,
+        "X-RapidAPI-Host": config.apiHost,
+      },
+    });
+
+    // Parse and return the result
     const responseData = await response.json();
-    const result = responseData.result;
+    const result = responseData.data || responseData.result || [];
 
     return NextResponse.json({ result });
   } catch (error: any) {
