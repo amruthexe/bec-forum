@@ -287,7 +287,7 @@ Environment variables[^12] can be used for configuration. They must be set befor
 
 > [Environment variables](https://en.wikipedia.org/wiki/Environment_variable) are variables that are set in the operating system or shell, typically used to configure programs.
 
-**Forum** uses [Clerk](https://clerk.com), [TinyMCE](https://uploadthing.com/), [RapidAPI](https://rapidapi.com), [OpenAI API](https://openai.com/blog/openai-api) and [MongoDB](https://mongodb.com) as external services. You need to create an account on each of these services and get the required credentials to run the app.
+**Forum** uses [Clerk](https://clerk.com), [TinyMCE](https://uploadthing.com/), [RapidAPI](https://rapidapi.com), [Gemini AI API](https://ai.google.dev/gemini-api/docs/models/gemini) and [MongoDB](https://mongodb.com) as external services. You need to create an account on each of these services and get the required credentials to run the app.
 
 Create a `.env` file in the root directory of the project and add the following environment variables:
 
