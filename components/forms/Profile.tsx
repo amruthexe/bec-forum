@@ -133,7 +133,7 @@ const Profile = ({ clerkId, user }: Props) => {
               <FormLabel className="paragraph-semibold text-dark400_light800">
                 Portfolio Link 
               </FormLabel>
-              <p className="text-white">if not there use copy this <code>https://becforumuser.vercel.app/</code> </p>
+              <p className="text-white">if not there ! use this <code>https://becforumuser.vercel.app/</code> </p>
               <FormControl>
                 <Input
                   type="url"
