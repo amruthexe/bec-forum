@@ -127,7 +127,7 @@ export default function Report() {
         {/* Team Members */}
         <div className="flex flex-wrap justify-center gap-8 mt-8 sm:flex-col md:flex-row">
           {[
-            { name: "Amruth Raj", role: "Full Stack Developer", img: "S1.jpg", portfolio: "https://amruthexe.vercel.app/" },
+            { name: "Amruth Raj", role: "Full Stack Developer", img: "S1.jpeg", portfolio: "https://amruthexe.vercel.app/" },
             { name: "Srinivas", role: "Backend Developer", img: "s2.jpeg", portfolio: "https://saisrininvas9.vercel.app/" },
             { name: "Karthik", role: "Frontend Developer", img: "s3.png", portfolio: "https://karthik7.vercel.app/" },
             { name: "Mahesh", role: "Designer", img: "s4.jpg", portfolio: "https://student4portfolio.com" }
