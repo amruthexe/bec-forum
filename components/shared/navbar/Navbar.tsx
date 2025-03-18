@@ -24,6 +24,7 @@ const Navbar = () => {
       <GlobalSearch />
 
       <div className="flex-between gap-5">
+        <Link href='/jobs' className="dark:text-white  text-bold "> Report </Link>
         <Theme />
 
         <SignedIn>
